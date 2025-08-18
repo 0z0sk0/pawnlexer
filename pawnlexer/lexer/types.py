@@ -3,7 +3,7 @@ tokens = (
     'FLOAT',
     'INTEGER',
     'STRING',
-    'ID'
+    'NAME'
 )
 
 
@@ -30,6 +30,6 @@ def t_STRING(t):
     return t
 
 
-def t_ID(t):
+def t_NAME(t):
     r'[a-zA-Z_][a-zA-Z0-9_]*'
     return t
