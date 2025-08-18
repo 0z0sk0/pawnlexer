@@ -19,7 +19,7 @@ def t_FLOAT(t):
 
 
 def t_INTEGER(t):
-    r'\d+'
+    r'\d+[LlUu]*'
     t.value = int(t.value)
     return t
 
