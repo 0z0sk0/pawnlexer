@@ -15,6 +15,10 @@ def t_whitespace(t):
     pass
 
 
-def t_comment(t):
-    r'(/\*(.|\n)*?\*/)|(//.*)'
+def t_single_comment(t):
+    r'/(\\\n)?/(\n|(.|\n)*?[^\\]\n)'
+    pass
+
+def t_multiline_comment(t):
+    r'/(\\\n)?\*[\w\W]*?\*(\\\n)?/'
     pass

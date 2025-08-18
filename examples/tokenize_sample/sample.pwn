@@ -5,6 +5,11 @@
 
 
 // Callbacks
+/*
+Multiline
+Comments
+There
+*/
 public auth_OnPlayerConnect(playerid)
 {
     authconnect(playerid);
