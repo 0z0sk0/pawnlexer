@@ -5,6 +5,7 @@ from .directives import *
 from .functions import *
 from .node import *
 from .operators import *
+from .bit_operators import *
 from .types import *
 
 

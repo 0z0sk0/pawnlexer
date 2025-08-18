@@ -6,15 +6,10 @@ tokens = (
     'MOD',
     'EQ',
     'NEQ',
-    'LT',
-    'LE',
-    'GT',
-    'GE',
-    'AND',
     'OR',
     'NOT',
     'INCREMENT',
-    'DEC',
+    'DECREMENT',
     'LPAREN',
     'RPAREN',
     'LBRACE',
@@ -25,7 +20,8 @@ tokens = (
     'SEMICOLON',
     'COLON',
     'DOT',
-    'ASSIGN'
+    'ASSIGN',
+    'QMARK'
 )
 
 
@@ -64,26 +60,6 @@ def t_NEQ(t):
     return t
 
 
-def t_LT(t):
-    r'<'
-    return t
-
-
-def t_LE(t):
-    r'<='
-    return t
-
-
-def t_GT(t):
-    r'>'
-    return t
-
-
-def t_GE(t):
-    r'>='
-    return t
-
-
 def t_AND(t):
     r'&&'
     return t
@@ -91,11 +67,6 @@ def t_AND(t):
 
 def t_OR(t):
     r'\|\|'
-    return t
-
-
-def t_DEC(t):
-    r'--'
     return t
 
 
@@ -161,4 +132,14 @@ def t_COMMA(t):
 
 def t_INCREMENT(t):
     r'\+\+'
+    return t
+
+
+def t_DECREMENT(t):
+    r'--'
+    return t
+
+
+def t_QMARK(t):
+    r'\?'
     return t
