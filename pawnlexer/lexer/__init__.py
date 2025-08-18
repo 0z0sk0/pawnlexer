@@ -4,18 +4,6 @@ import inspect
 from .bit_operators import *
 from .directives import *
 from .functions import *
-from .node import *
-from .operators import *
-from .statements import *
-from .types import *
-
-
-import sys
-import inspect
-
-from .bit_operators import *
-from .directives import *
-from .functions import *
 from .operators import *
 from .statements import *
 from .types import *
@@ -25,8 +13,6 @@ from .node import *
 lex_rules = {}
 all_tokens = []
 reserved = {}
-
-start = 'program'
 
 current_package = __package__
 modules = []
