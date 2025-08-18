@@ -28,6 +28,35 @@ public auth_OnPlayerConnect(playerid)
     x &= 12;
     x = x ^ 6;
     x ^= 6;
+
+    if (x == 3)
+    {
+        x = 3;
+    }
+    elseif (x == 5)
+    {
+        x = 5;
+    }
+    else
+    {
+        x = 6;
+    }
+
+    while (x < 6)
+    {
+        x = 6;
+    }
+
+    do
+    {
+        x++;
+    }
+    while (x <= 10)
+
+    for (x = 1; x < 5; i++)
+    {
+         x = 3;
+    }
 }
 
 native PC_EmulateCommand(playerid, const cmdtext[]);

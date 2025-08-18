@@ -7,4 +7,5 @@ if __name__ == '__main__':
     with open('sample.pwn', 'r') as file:
         data = file.read()
         tokenized = pawnlexer.tokenize(data)
-        print(tokenized)
+        for token in tokenized:
+            print(token)
