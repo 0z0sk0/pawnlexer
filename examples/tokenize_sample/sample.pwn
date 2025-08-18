@@ -13,4 +13,5 @@ There
 public auth_OnPlayerConnect(playerid)
 {
     authconnect(playerid);
+    new sampleVar = 0.01;
 }

@@ -13,7 +13,7 @@ def t_NEW(t):
 
 
 def t_FLOAT(t):
-    r'\d+\.\d+'
+    r'(\d+\.\d*|\.\d+|\d+[fF])[fF]?'
     t.value = float(t.value)
     return t
 
