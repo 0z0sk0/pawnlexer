@@ -1,3 +1,4 @@
-new x = 3 + 3;
-new y = 3 / 2;
-new z = 3 * 3;
+bool:test(x = 1, _:y, Float:z=1488.0, xyz)
+{
+    new x = 1;
+}

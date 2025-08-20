@@ -2,9 +2,11 @@ import sys
 import inspect
 
 from .program import *
+from .tags import *
 from .expressions import *
 from .node import *
 from .variable import *
+from .functions import *
 
 
 parse_rules = {}

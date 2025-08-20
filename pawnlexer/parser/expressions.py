@@ -1,5 +1,5 @@
 from .node import ASTNode
-from .types import Integer
+from .types import Integer, Float
 
 
 class BinaryOperation(ASTNode):
@@ -47,6 +47,11 @@ def p_term_factor(p):
 def p_factor_num(p):
     'factor : INTEGER'
     p[0] = Integer(value=p[1], lineno=p.lineno(1))
+
+
+def p_factor_float(p):
+    'factor : FLOAT'
+    p[0] = Float(value=p[1], lineno=p.lineno(1))
 
 
 def p_factor_expr(p):

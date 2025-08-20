@@ -14,3 +14,7 @@ def p_error(p):
         print("Syntax error at EOF")
 
 
+def p_empty(p):
+    'empty :'
+    p[0] = None
+

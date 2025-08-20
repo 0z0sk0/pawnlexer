@@ -3,7 +3,8 @@ tokens = (
     'FLOAT',
     'INTEGER',
     'STRING',
-    'NAME'
+    'NAME',
+    'TYPE_ANNOTATION'
 )
 
 
