@@ -12,20 +12,52 @@ Lexer and parser for Pawn language
    - [ ] Include
    - [ ] If/else statements
 - [ ] Variables
-- [ ] Arrays
-   - [ ] Multi-dimensional arrays
-   - [ ] Items auto-fill on initialization
-- [ ] Functions
-   - [ ] Forward/Public
+   - [ ] Types
+      - [ ] Integer
+      - [ ] Float
+      - [ ] Char
    - [ ] Modificators
-   - [ ] Variadic parameters
+      - [ ] New
+      - [ ] Static
+      - [ ] Const
+      - [ ] Stock
+      - [ ] Both
+- [ ] Arrays
+   - [ ] Char arrays
+   - [ ] Multi-dimensional arrays
+   - [ ] Array initializers
+   - [ ] Enums
+- [ ] Functions
+   - [ ] Stocks
+   - [ ] Forward
+   - [ ] Public
+   - [ ] Modificators
+   - [ ] Variable arguments
+- [ ] Loops
+   - [ ] For
+   - [ ] While
+   - [ ] While/Do
+- [ ] Statements
+   - [ ] If / else / elseif
+   - [ ] Switch
+   - [ ] Return
+   - [ ] Goto
 - [ ] Bitwise operations
-- [ ] Operator overloading
-- [ ] Strings pack/unpack
+   - [ ] AND / AND EQUAL
+   - [ ] OR / OR EQUAL
+   - [ ] XOR / XOR EQUAL
+   - [ ] NOT
+   - [ ] LEFT SHIFT / LEFT SHIFT EQUAL
+   - [ ] RIGHT SHIFT / RIGHT SHIFT EQUAL
 - [ ] Tags
-- [ ] Automatons (State machine)  
-
-### In Progress
-
-### Done ✓
-
+   - [ ] Function tags
+   - [ ] Variables tags
+   - [ ] Casting with _:
+- [ ] Featuring
+   - [ ] Operator overloading
+   - [ ] Strings pack/unpack
+   - [ ] Automatons (State machine)
+   - [ ] Stdlib functions
+   - [ ] Code styling
+      - [ ] Unbraced
+      - [ ] Non-typed
