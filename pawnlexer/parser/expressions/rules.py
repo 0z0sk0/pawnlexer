@@ -1,19 +1,16 @@
-from .node import ASTNode
-from .types import Integer, Float
+from pawnlexer.parser.expressions import BinaryOperation
+from pawnlexer.parser.types import Integer, Float, String
 
 
-class BinaryOperation(ASTNode):
-    def __init__(self, op, left, right, lineno=None):
-        super().__init__(lineno)
-        self.op = op
-        self.left = left
-        self.right = right
-
-    def __repr__(self):
-        return f"{self.__class__.__name__}({self.op}, {self.left}, {self.right})"
+def p_expression_list(p):
+    '''expression_list : expression
+                       | expression_list COMMA expression'''
+    if len(p) == 2:
+        p[0] = [p[1]]
+    else:
+        p[0] = p[1] + [p[3]]
 
 
-# yacc rules
 def p_expression_plus(p):
     'expression : expression PLUS term'
     p[0] = BinaryOperation(op='+', left=p[1], right=p[3], lineno=p.lineno(2))
@@ -52,6 +49,10 @@ def p_factor_num(p):
 def p_factor_float(p):
     'factor : FLOAT'
     p[0] = Float(value=p[1], lineno=p.lineno(1))
+
+def p_factor_string(p):
+    'factor : STRING'
+    p[0] = String(value=p[1], lineno=p.lineno(1))
 
 
 def p_factor_expr(p):

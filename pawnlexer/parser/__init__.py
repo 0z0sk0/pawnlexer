@@ -1,11 +1,14 @@
 import sys
 import inspect
 
+from .node import *
+from .rules import *
+
 from .program import *
 from .tags import *
+from .types import *
 from .expressions import *
-from .node import *
-from .variable import *
+from .variables import *
 from .functions import *
 
 
@@ -15,6 +18,7 @@ start = 'program'
 
 current_package = __package__
 modules = []
+
 for name, obj in list(sys.modules.items()):
     if name.startswith(current_package + '.') and inspect.ismodule(obj):
         if name == __name__ or not name.startswith(current_package + '.'):

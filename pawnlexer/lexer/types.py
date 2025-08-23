@@ -3,8 +3,9 @@ tokens = (
     'FLOAT',
     'INTEGER',
     'STRING',
-    'NAME',
-    'TYPE_ANNOTATION'
+    'CONST',
+    'STATIC',
+    'NAME'
 )
 
 
@@ -28,6 +29,14 @@ def t_INTEGER(t):
 def t_STRING(t):
     r'\"([^\\\n]|(\\.))*?\"'
     t.value = t.value[1:-1]
+    return t
+
+def t_CONST(t):
+    r'\bconst\b'
+    return t
+
+def t_STATIC(t):
+    r'\bstatic\b'
     return t
 
 
