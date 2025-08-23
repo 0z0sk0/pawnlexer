@@ -19,6 +19,7 @@ start = 'program'
 current_package = __package__
 modules = []
 
+
 for name, obj in list(sys.modules.items()):
     if name.startswith(current_package + '.') and inspect.ismodule(obj):
         if name == __name__ or not name.startswith(current_package + '.'):

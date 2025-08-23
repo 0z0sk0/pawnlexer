@@ -1,5 +1,5 @@
-from pawnlexer.parser.variables import NewVariable
-from pawnlexer.parser.types import String
+from pawnlexer.parser.variables import Variable
+from pawnlexer.parser.functions import StockFunction
 
 
 def p_stock_impersonal_function(p):
@@ -115,4 +115,4 @@ def p_parameter(p):
             else:
                 params['array_size'] = tokens[1]
 
-    p[0] = NewVariable(**params)
+    p[0] = Variable(**params)
