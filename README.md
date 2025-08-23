@@ -13,15 +13,15 @@ Lexer and parser for Pawn language
    - [ ] If/else statements
 - [ ] Variables
    - [ ] Types
-      - [ ] Integer
-      - [ ] Float
+      - [x] Integer
+      - [x] Float
       - [ ] Char
-   - [ ] Modificators
-      - [ ] New
-      - [ ] Static
-      - [ ] Const
-      - [ ] Stock
-      - [ ] Both
+   - [x] Modificators
+      - [x] New
+      - [x] Static
+      - [x] Const
+      - [x] Stock
+      - [x] Both
 - [ ] Arrays
    - [ ] Char arrays
    - [ ] Multi-dimensional arrays
