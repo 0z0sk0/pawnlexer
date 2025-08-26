@@ -18,7 +18,7 @@ class PawnLexer:
 
         for name, rule in parse_rules.items():
             setattr(self, name, rule)
-        self.parser = yacc.yacc(module=self, debug=True)
+        self.parser = yacc.yacc(module=self)
 
     def tokenize(self, line):
         tokenized_data = []

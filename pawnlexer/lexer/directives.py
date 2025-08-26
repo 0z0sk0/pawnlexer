@@ -1,25 +1,19 @@
 tokens = (
-    'INCLUDE',
-    'LOCAL_INCLUDE_PATH',
-    'GLOBAL_INCLUDE_PATH',
+    'LOCAL_INCLUDE',
+    'GLOBAL_INCLUDE',
     'PRAGMA',
     'DEFINE'
 )
 
 
-def t_INCLUDE(t):
-    r'\#include'
-    return t
-
-
-def t_LOCAL_INCLUDE_PATH(t):
-    r'[\""][a-zA-Z0-9_\/\.-]+[\""]'
+def t_LOCAL_INCLUDE(t):
+    r'\#include\s+[\""][a-zA-Z0-9_\/\.-]+[\""]'
     t.value = t.value[1:-1]
     return t
 
 
-def t_GLOBAL_INCLUDE_PATH(t):
-    r'[<"][a-zA-Z0-9_\/\.-]+[>"]'
+def t_GLOBAL_INCLUDE(t):
+    r'\#include\s+[<"][a-zA-Z0-9_\/\.-]+[>"]'
     t.value = t.value[1:-1]
     return t
 

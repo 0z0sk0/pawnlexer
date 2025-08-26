@@ -21,17 +21,21 @@ tokens = (
     'COLON',
     'DOT',
     'ASSIGN',
-    'QMARK'
+    'QMARK',
+    'LESS',
+    'MORE',
+    'LESS_EQ',
+    'MORE_EQ'
 )
 
 
 def t_PLUS(t):
-    r'\+'
+    r'\+(?!\+|=)'
     return t
 
 
 def t_MINUS(t):
-    r'-'
+    r'-(?!-|=)'
     return t
 
 
@@ -142,4 +146,20 @@ def t_DECREMENT(t):
 
 def t_QMARK(t):
     r'\?'
+    return t
+
+def t_LESS(t):
+    r'\<(?!=)'
+    return t
+
+def t_MORE(t):
+    r'\>(?!=)'
+    return t
+
+def t_LESS_EQ(t):
+    r'\<='
+    return t
+
+def t_MORE_EQ(t):
+    r'\>='
     return t

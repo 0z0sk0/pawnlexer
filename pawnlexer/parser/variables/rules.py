@@ -188,11 +188,7 @@ def p_variable_declaration(p):
 
     if len(parameters) == 2:
         params['tag'] = parameters[0]
-        params['name'] = parameters[1]
-        for i in range(2):
-            parameters.pop(0)
-    else:
-        params['name'] = parameters[0]
         parameters.pop(0)
+    params['name'] = parameters[0]
 
     p[0] = Variable(**params)
