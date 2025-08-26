@@ -9,6 +9,6 @@ class LexerTest:
     def test_check_tokenize(self):
         content = self.content
         tokenized = self.context.library.tokenize(content)
-        tokenized = [token.type for token in tokenized]
+        self.tokenized = [token.type for token in tokenized]
         correct = self.correct.strip().split()
-        assert tokenized == correct
+        assert self.tokenized == correct

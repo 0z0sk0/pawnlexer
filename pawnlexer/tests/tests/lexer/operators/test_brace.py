@@ -3,9 +3,15 @@ from ... import LexerTest
 
 class TestOperatorBrace(LexerTest):
     content = '''
-        stock test() { return 1; });
+        stock test() 
+        { 
+            x++;
+        }
     '''
 
     correct = '''
-        STOCK NAME LPAREN RPAREN LBRACE RETURN INTEGER SEMICOLON RBRACE
+        STOCK NAME LPAREN RPAREN 
+        LBRACE 
+            NAME INCREMENT SEMICOLON
+        RBRACE
     '''
